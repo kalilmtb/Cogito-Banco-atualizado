@@ -1,0 +1,125 @@
+:root{
+    --bg: #0a0d14;
+    --bg-soft: #0f1522;
+    --card: #121a2b;
+    --brand: #ffde59;      /* amarelo */
+    --brand-2: #ffde59;    /* amarelo */
+    --accent: #ffde59;     /* amarelo */
+    --text: #e7eef8;
+    --muted: #9fb0c7;
+    --danger: #ff6b6b;
+    --highlight: #ffde59;  /* amarelo */
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+    --radius-xl: 20px;
+}
+*{box-sizing:border-box}
+html,body{height:100%; margin:0; padding:0;}
+body{
+    font-family: "Lexend Peta", Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(1200px 800px at 90% -10%, rgba(255,222,89,.35) 0%, rgba(255,222,89,0) 60%),
+        radial-gradient(1000px 800px at -10% 10%, rgba(255,222,89,.35) 0%, rgba(255,222,89,0) 55%),
+        linear-gradient(180deg, #0a0d14 0%, #0a0d14 100%);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+a{color:inherit; text-decoration:none}
+
+.btn{padding:10px 14px; border-radius:12px; font-weight:600; border:1px solid rgba(255,255,255,.12); box-shadow: var(--shadow); cursor: pointer;}
+.btn-brand{background: linear-gradient(90deg, var(--brand), var(--brand-2)); color:#06111a; transition: all 0.3s ease;}
+.btn-brand:hover{transform: translateY(-2px); box-shadow: 0 12px 20px rgba(0,0,0,0.4);}
+
+/* Login Card */
+.card{background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.12); border-radius: var(--radius-xl); padding:30px; box-shadow: var(--shadow); width: 100%; max-width: 420px;}
+.login h2{margin:0 0 8px; font-size:22px; text-align: center;}
+.login p{margin:0 0 18px; color:var(--muted); text-align: center;}
+.form{display:grid; gap:12px;}
+.label{font-size:13px; color:var(--muted); font-weight: 500;}
+.input{background:#0f1523; border:1px solid rgba(255,255,255,.14); border-radius:12px; padding:12px 14px; color:var(--text); outline:none; width: 100%; transition: all 0.3s ease;}
+.input:focus{border-color: var(--brand); box-shadow: 0 0 0 3px rgba(255,222,89,.2)}
+.form-actions{display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:6px; flex-wrap: wrap;}
+.link{color: var(--brand); transition: all 0.3s ease;}
+.link:hover{text-decoration: underline;}
+
+/* Logo/Brand */
+.brand {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.brand h1 {
+    font-size: 28px;
+    margin: 0;
+    color: var(--brand);
+    letter-spacing: -0.5px;
+}
+.brand p {
+    color: var(--muted);
+    margin: 8px 0 0;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 480px){
+    .card{padding:22px;}
+    .form-actions{flex-direction: column; align-items: stretch;}
+    .form-actions a{order: 2; text-align: center; margin-top: 10px;}
+    .form-actions button{order: 1; width: 100%;}
+}
+
+
+        /* Estilos adicionais específicos para a página de cadastro */
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .combo-box {
+            background: #0f1523;
+            border: 1px solid rgba(255,255,255,.14);
+            border-radius: 12px;
+            padding: 12px 14px;
+            color: var(--text);
+            outline: none;
+            width: 100%;
+            transition: all 0.3s ease;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%239fb0c7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 16px;
+        }
+        
+        .combo-box:focus {
+            border-color: var(--brand);
+            box-shadow: 0 0 0 3px rgba(255,222,89,.2);
+        }
+        
+        .terms {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 12px 0;
+        }
+        
+        .terms input[type="checkbox"] {
+            margin-top: 3px;
+        }
+        
+        .terms label {
+            font-size: 13px;
+            color: var(--muted);
+        }
+        
+        .terms a {
+            color: var(--brand);
+            text-decoration: underline;
+        }
+   

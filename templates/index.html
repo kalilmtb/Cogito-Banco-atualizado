@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cogito, quem disse cientista?</title>
+  <meta name="description" content="Cogito' – quem disse cientista?" />
+  <link rel="stylesheet" href="static/style/styleIndex.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@400;600;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <div class="site-wrap">
+    <header>
+      <nav class="nav" aria-label="Principal">
+        <a href="#" class="logo" aria-label="Página inicial">
+          <span>C</span><span>O</span><span>G</span><span>I</span><span>T</span><span>O</span><span style="color:var(--highlight)">O</span>
+        </a>
+        <div class="grow"></div>
+        <div class="nav-links">
+          <a class="pill" href="#tccs">TCC's</a>
+          <a class="pill" href="#ics">IC's</a>
+          <a class="pill" href="#mestrado">Mestrado</a>
+          <a class="pill" href="#doutorado">Doutorado</a>
+          <a class="btn btn-ghost" href="#acesso">Entrar</a>
+          <a class="btn btn-brand" href="/cadastro">Cadastre-se</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Cogito, quem disse cientista?</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias in nemo officia architecto! Explicabo cumque facilis magnam officia, libero suscipit commodi odit animi labore hic aperiam et, unde rem debitis?</p>
+          <div class="hero-cta">
+            <a class="btn btn-brand" href="#acesso">Acessar plataforma</a>
+            <a class="btn btn-ghost" href="#tccs">Explorar recursos</a>
+          </div>
+
+          <div class="statbar" role="list">
+            <div class="stat" role="listitem"><b>+2.5M</b><span>atividades entregues</span></div>
+            <div class="stat" role="listitem"><b>99.9%</b><span>uptime nos últimos 12 meses</span></div>
+            <div class="stat" role="listitem"><b>LGPD</b><span>conformidade e segurança</span></div>
+          </div>
+        </div>
+
+        <div class="card login" id="acesso" aria-labelledby="titulo-login">
+  <h2 id="titulo-login">Entre na sua conta</h2>
+  <p>Acesse com seu e-mail institucional ou usuário da escola.</p>
+  <form class="form" action="#" method="post" onsubmit="return false" aria-label="Formulário de login">
+    <label class="label" for="user">E-mail ou usuário</label>
+    <input class="input" id="user" name="user" type="text" autocomplete="username" placeholder="nome@escola.edu.br" required>
+    
+    <label class="label" for="pass">Senha</label>
+    <input class="input" id="pass" name="pass" type="password" autocomplete="current-password" placeholder="••••••••" required>
+
+    <div class="form-actions">
+      <a class="link" href="#">Esqueci minha senha</a>
+     
+    </div>
+
+    <div class="register">
+      <a class="link" href="/cadastro">Não se registrou ainda? Cadastre-se!</a>
+       
+    </div>
+
+    <div>
+      <button class="btn btn-brand" type="submit">Entrar</button>
+    </div>
+  </form>
+</div>
+
+      </section>
+
+      <!-- TCC's -->
+      <section id="tccs">
+        <div class="container">
+          <div class="grid-3">
+            <article class="card">
+              <h3>Alguma coisa</h3>
+              <p>Lorem ipsum dolor, minus nemo quaerat natus maxime harum obcaecati eligendi!</p>
+            </article>
+            <article class="card">
+              <h3>Alguma coisa</h3>
+              <p>Lorem ipsum dolor, minus nemo quaerat natus maxime harum obcaecati eligendi!</p>
+            </article>
+            <article class="card">
+              <h3>Alguma coisa</h3>
+              <p>Lorem ipsum dolor, minus nemo quaerat natus maxime harum obcaecati eligendi!</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mestrado -->
+      <section id="mestrado">
+        <div class="container grid-2" style="align-items:center">
+          <div>
+            <h2>Aprenda no seu ritmo</h2>
+            <p class="muted">Crie hábitos de estudo com metas semanais, notificações de pendências e relatórios de desempenho por disciplina.</p>
+            <ul>
+              <li>Gamificação leve para motivar a prática</li>
+              <li>Aplicativo amigável em dispositivos móveis</li>
+              <li>Suporte offline para atividades</li>
+            </ul>
+          </div>
+          <div class="illus">
+            <div class="blob a"></div>
+            <div class="blob b"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IC's -->
+      <section id="ics">
+        <div class="container">
+          <div class="card" style="display:grid; grid-template-columns: 1.2fr 1fr; gap:18px; align-items:center">
+            <div>
+              <h2>Gestão pedagógica integrada</h2>
+              <p>Indicadores de aprendizagem, frequência, tarefas e participação em um só lugar, com exportação e integrações.</p>
+              <div style="display:flex; gap:12px; margin-top:10px">
+                <a class="btn btn-brand" href="#demo">Falar com time pedagógico</a>
+                <a class="btn btn-ghost" href="#">Ver integrações</a>
+              </div>
+            </div>
+            <div class="illus">
+              <div class="blob a" style="left:auto; right:-30px; top:-10px"></div>
+              <div class="blob b" style="left:-40px; bottom:-20px"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Doutorado -->
+      <section id="doutorado">
+        <div class="container">
+          <h2>Contato</h2>
+          <p>Entre em contato conosco para tirar dúvidas ou solicitar informações sobre programas avançados.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot">
+        <div>
+          <a href="#" class="logo" aria-label="Página inicial">
+            <span>C</span><span>O</span><span>G</span><span>I</span><span>T</span><span>O</span><span style="color:var(--highlight)">O</span>
+          </a>
+          <small>© <span id="year"></span> Cogito. Todos os direitos reservados.</small>
+        </div>
+        <div>
+          <h4>Produto</h4>
+          <a href="#tccs">TCC's</a>
+          <a href="#">Planos</a>
+          <a href="#">Aplicativos</a>
+        </div>
+        <div>
+          <h4>Institucional</h4>
+          <a href="#">Sobre</a>
+          <a href="#">Carreiras</a>
+          <a href="#">Privacidade</a>
+        </div>
+        <div>
+          <h4>Suporte</h4>
+          <a href="#">Central de ajuda</a>
+          <a href="#">Status</a>
+          <a href="#">Contato</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Atualiza ano no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
