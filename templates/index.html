@@ -26,6 +26,13 @@
           <a class="pill" href="#doutorado">Doutorado</a>
           <a class="btn btn-ghost" href="#acesso">Entrar</a>
           <a class="btn btn-brand" href="/cadastro">Cadastre-se</a>
+
+          <button class="btn btn-ghost" id="theme-toggle" aria-label="Alternar tema">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+                <path d="M12 4v1M18 6l-1 1M20 12h-1M18 18l-1-1M12 19v1M7 17l-1 1M5 12H4M7 7L6 6"></path>
+            </svg>
+        </button>
         </div>
       </nav>
     </header>
@@ -177,5 +184,36 @@
     // Atualiza ano no rodapé
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script>
+    // Função para alternar entre temas claro e escuro
+    function toggleTheme() {
+        const body = document.body;
+        const isDarkMode = body.classList.contains('light-theme');
+        
+        if (isDarkMode) {
+            // Voltar para o tema escuro
+            body.classList.remove('light-theme');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            // Mudar para tema claro
+            body.classList.add('light-theme');
+            localStorage.setItem('theme', 'light');
+        }
+    }
+    
+    // Verificar preferência salva ao carregar a página
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-theme');
+        }
+        
+        // Adicionar evento de clique ao botão
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', toggleTheme);
+        }
+    });
+</script>
 </body>
 </html>

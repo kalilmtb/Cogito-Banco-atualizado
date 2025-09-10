@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style/styleLogin.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+<header>
+    <button class="btn btn-ghost" id="theme-toggle" aria-label="Alternar tema" style="position: absolute; top: 20px; right: 20px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+            <path d="M12 4v1M18 6l-1 1M20 12h-1M18 18l-1-1M12 19v1M7 17l-1 1M5 12H4M7 7L6 6"></path>
+        </svg>
+    </button>
+</header>
 <body>
     <div class="card login" id="cadastro" aria-labelledby="titulo-cadastro">
         <div class="brand" style="font-family: 'Lexend Peta', sans-serif;">
@@ -86,5 +94,36 @@
             </div>
         </form>
     </div>
+    <script>
+        // Função para alternar entre temas claro e escuro
+        function toggleTheme() {
+            const body = document.body;
+            const isDarkMode = body.classList.contains('light-theme');
+            
+            if (isDarkMode) {
+                // Voltar para o tema escuro
+                body.classList.remove('light-theme');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                // Mudar para tema claro
+                body.classList.add('light-theme');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+        
+        // Verificar preferência salva ao carregar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-theme');
+            }
+            
+            // Adicionar evento de clique ao botão
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+        });
+    </script>
 </body>
 </html>
